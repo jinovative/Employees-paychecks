@@ -1,5 +1,4 @@
 import java.text.DecimalFormat;
-import java.text.NumberFormat;
 
 public class PayCheck {
   // A PayCheck constructor that takes the employee name, rate, and hours worked
@@ -13,18 +12,11 @@ public class PayCheck {
     this.employeeName = employeeName;
     this.rate = rate;
     this.hoursWorked = hoursWorked;
-    calcualtionPay();
   }
 
   public double getTotalPay() {
-    return totalPay;
+    return rate * hoursWorked;
   }
-
-  public void calcualtionPay() {
-
-  }
-
-
 
   public String toString() {
     DecimalFormat decimalFormat = new DecimalFormat("$#.##");
