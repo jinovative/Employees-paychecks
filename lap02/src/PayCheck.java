@@ -1,12 +1,12 @@
-package pack;
 import java.text.DecimalFormat;
 
 public class PayCheck {
   // A PayCheck constructor that takes the employee name, rate, and hours worked
   // as parameters and calculates (and stores) the total pay for the week.
-  private final String employeeName;
-  private final double rate;
-  private final double hoursWorked;
+  private String employeeName;
+  private double rate;
+  private double hoursWorked;
+  private double totalPay;
 
   public PayCheck(String employeeName, double rate, double hoursWorked) {
     this.employeeName = employeeName;
@@ -15,19 +15,14 @@ public class PayCheck {
   }
 
   public double getTotalPay() {
-    double total;
-    if (hoursWorked >= 40) {
-      total = rate * hoursWorked;
-    } else {
-      double overtime = hoursWorked - 40;
-      total = (40 * rate) +(overtime * rate * 1.5);
-    }
-    return total;
+    return rate * hoursWorked;
   }
 
   public String toString() {
     DecimalFormat decimalFormat = new DecimalFormat("$#.##");
-    return decimalFormat.format(getTotalPay());
+    return decimalFormat.format(totalPay);
+
+
   }
 }
 

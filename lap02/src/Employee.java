@@ -1,5 +1,3 @@
-
-import pack.*;
 public class Employee {
   private String name;
   private double hoursWorked;
@@ -35,13 +33,4 @@ public class Employee {
   public String toString() {
     return name;
   }
-
-
-  public static void main(String[] args) {
-    Employee em = new Employee("Jin", 5.0);
-    em.addHoursWorked(40);
-    PayCheck pay = em.getWeeklyCheck();
-    System.out.println(pay.getTotalPay());
-
-    }
-  }
+}
